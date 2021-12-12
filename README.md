@@ -1,2 +1,19 @@
-# kickstarter-analysis
-Kickstarter analysis for Module 1 Challenge
+# Kickstarting with Excel: Analysis of Project Based on Outcomes Based on Launch Date and Outcomes Based on Goals 
+## Overview of Project
+The purpose of this analysis was to determine how different campaigns performed in relation to their launch dates and their funding goals. Using the Kickstarter data provided for all the campaigns, some filtering will be used to determined results based on specific outcomes, categories, subcategories, time periods and dollar amounts. 
+## Analysis and Challenges
+The two analysis that were performed were on campaign outcomes based on launch date and campaign outcomes based on goals.
+### Campaign Outcomes Based on Launch Date
+When analyzing the campaign outcomes based on launch date, the data was filtered to only look at campaigns in the theater category, which includes musicals, plays and spaces. A pivot table was inserted and filtered by years and category. Outcomes were counted by the possible campaign outcomes and by month the campaign was launched. The possible campaign outcomes are successful, failed and canceled. Additionally, a line graph visualizing the data in the pivot table was created. 
+### Campaign Outcomes Based on Goals 
+When analyzing the campaign outcomes based on goals, the data was filter to only look at campaigns in the plays subcategory. The analysis determined the percentage of successful, failed and canceled plays based on the funding goal amount. The data was segmented into twelve categories, based on the dollar amount set for the goal. A line graph was created based on the percentages to visualize the data and to determine what funding goals are most successful and least successful. 
+### Challenges
+The main challenge and difficulty of this analysis was ensuring accuracy. Accuracy was needed in filtering the data correctly and setting up the excel formulas. One specific error that was encountered was an incorrectly input for the COUNTIFS formula for the Outcomes based on Goals analysis. Rather than the correct formula (=COUNTIFS(Kickstarter!D:D,"<1000",Kickstarter!R:R,"plays",Kickstarter!F:F,"failed")), the following formula was used: (=COUNTIFS(Kickstarter!D:D,"<1000",Kickstarter!R:R,"plays",Kickstarter!F:F,failed). The criteria 3 to filter by failed campaigns was not in quotation marks so the cell displayed 0 rather than the correct 45. The was corrected after a realization that the total campaigns in the table did not match the data in the Kickstarter data. 
+## Results
+Based on the data, the pivot table and the line graph from the Theater Outcomes by Launch Date, the months of May and June had the most campaigns launched. The most successful month for campaigns is May, followed closely by June. May also had the most failed campaigns, followed by July and October. The month of January had the most cancelled campaigns. The best time to launch a campaign is during May and June.
+
+Based on the data and line graph from the Outcomes based on Goals, the conclusion reached is smaller funding goals from less than $1000-$14,999 have a higher percentage to be successful. Goals equal or higher to $15,000 are more likely to fail. The majority of campaigns for plays have smaller funding goals. 
+
+The limitations of this dataset are that it is reliant on that there are no errors in the initial reported data. This data must be input correctly. If it is not, that would be human error. Another limitation of the dataset is a limited sample size, specifically for the Outcomes based on Goals dataset. There are only 86 campaigns for the larger funding goals, whereas total there are over 1,000 campaigns. 
+
+Some other possible tables and graphs can be created from this data. It would be interesting to see if the average donation or dollar amount pledged affects the likelihood of a campaign to be successful or failing. A pivot table including the amount pledged and average donation and a subsequent line graph would determine the answer to this question. 
